@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine? 💕</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Background Hearts -->
+    <div class="hearts-bg"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Will you be my Valentine? 💕</h1>
+
+        <div class="gif-container">
+            <img id="cat-gif" src="https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif"
+                alt="cute character">
+        </div>
+
+        <div class="buttons">
+            <button id="yes-btn" onclick="handleYesClick()">Yes</button>
+            <button id="no-btn" onclick="handleNoClick()">No</button>
+        </div>
+
+        <div id="tease-toast"></div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="./music/glue-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle -->
+    <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

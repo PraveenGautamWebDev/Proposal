@@ -1,0 +1,193 @@
+/* ========== FONT (keep only what you need) ========== */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    src: url(https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
+}
+
+/* ========== BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFE4E8;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background-image:
+        radial-gradient(circle at 15% 85%, #ffb3c1 0%, transparent 40%),
+        radial-gradient(circle at 85% 15%, #ff8fa3 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, #fff0f3 0%, transparent 60%);
+}
+
+/* ========== HEARTS BG ========== */
+.hearts-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hearts-bg::before,
+.hearts-bg::after {
+    content: '💕 💗 💖 💝 💓';
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.15;
+    animation: floatHearts 12s linear infinite;
+    white-space: nowrap;
+    top: 100%;
+    left: 10%;
+}
+
+.hearts-bg::after {
+    animation-delay: 6s;
+    left: 60%;
+}
+
+@keyframes floatHearts {
+    from {
+        transform: translateY(0);
+        opacity: 0.15;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* ========== COMMON ========== */
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: #d63384;
+    font-weight: 900;
+    margin-bottom: 20px;
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+.gif-container {
+    margin: 20px auto;
+}
+
+#cat-gif {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* ========== BUTTONS ========== */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#yes-btn {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 18px 45px;
+    cursor: pointer;
+}
+
+#no-btn {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+
+/* ========== MUSIC BUTTON ========== */
+#music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ========== YES PAGE ========== */
+.yes-container h1 {
+    font-size: 2.8rem;
+    animation: bounce 0.6s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.yes-message {
+    font-size: 1.4rem;
+    color: #e91e8c;
+    margin-top: 20px;
+}
+
+.yes-container #cat-gif {
+    width: 260px;
+    height: 260px;
+}
